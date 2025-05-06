@@ -17,7 +17,7 @@ public class Bt05 extends HttpServlet {
 
             response.getWriter().println("<h1>Kết quả: " + c + "</h1>");
 
-        } catch (Exception e) {
+        } catch (ArithmeticException e) {
             // Gửi lỗi sang trang error.jsp
             request.setAttribute("errorMessage", e.getMessage());
             request.getRequestDispatcher("error.jsp").forward(request, response);
